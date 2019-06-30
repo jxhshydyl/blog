@@ -1,0 +1,14 @@
+server:
+  port: 8082
+  tomcat:
+    uri-encoding: UTF-8
+logging:
+  level:
+    org:
+      springframework: WARN
+    com:
+      lwp:
+        comment:
+          blogcomment: DEBUG
+
+

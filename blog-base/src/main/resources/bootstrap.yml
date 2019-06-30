@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: blog-base
+  profiles:
+    active: local
+eureka:
+  instance:
+    prefer-ip-address: true
+---
+spring:
+  profiles: local
+#  cloud:
+#    config:
+#      enabled: false
+#    bus:
+#      enabled: false
+
+eureka:
+#  instance:
+#    prefer-ip-address: true
+#    lease-expiration-duration-in-seconds: 1
+#    lease-renewal-interval-in-seconds: 1
+  client:
+  #服务地址
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/

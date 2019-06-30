@@ -1,0 +1,32 @@
+server:
+  port: 8083
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  #  设置静态资源路径  可从外部直接访问
+  resources:
+    static-locations:  classpath:/html/,classpath:/static/
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html; charset=utf-8
+
+logging:
+  level:
+    org:
+      springframework: WARN
+    com:
+      lwp:
+        comment:
+          blogcomment: DEBUG
+
+

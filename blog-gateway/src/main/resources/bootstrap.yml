@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: blog-gateway
+  profiles:
+    active: local
+  cloud:
+    gateway:
+      filter:
+        remove-non-proxy-headers:
+          headers:
+          - dummy
+#      routes:
+#        - id:  apiui
+#        # 重点！/info必须使用http进行转发，lb代表从注册中心获取服务
+#          uri: lb://blog-ui
+#          predicates:
+#          # 重点！转发该路径！,/userapi/**,
+#          - Path=/ui/**
+#          # http://localhost:6601/userapi/user/users/2, 必须加上StripPrefix=1，否则访问服务时会带上userapi
+#          #而不是我们期望的去掉userapi，只保留**部分
+##设置StripPrefix=1表示从二级url路径转发，即http://localhost:port/activity/test将会转发到http://{activity}/test
+#          filters:
+#          - StripPrefix=1
+#        - id: apicomment
+#          uri: lb://blog-comment
+#          predicates:
+#          - Path=/comment/**
+#          filters:
+#          - StripPrefix=1
+#        - id: apicomment
+#          uri: lb://blog-base
+#          predicates:
+#          - Path=/base/**
+#          filters:
+#          - StripPrefix=1
+
+eureka:
+  instance:
+    prefer-ip-address: true
+---
+spring:
+  profiles: local
+#  cloud:
+#    config:
+#      enabled: false
+#    bus:
+#      enabled: false
+
+eureka:
+#  instance:
+#    prefer-ip-address: true
+#    lease-expiration-duration-in-seconds: 1
+#    lease-renewal-interval-in-seconds: 1
+  client:
+  #服务地址
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+      #需要从服务器获取注册信息
+#    fetch-registry: false
