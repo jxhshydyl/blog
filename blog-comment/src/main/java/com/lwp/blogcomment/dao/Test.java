@@ -1,6 +1,6 @@
 package com.lwp.blogcomment.dao;
 
-import com.lwp.comment.blogcomment.model.domain.User;
+import com.lwp.blogcomment.model.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
