@@ -23,4 +23,4 @@ eureka:
   client:
   #服务地址
     serviceUrl:
-      defaultZone: http://localhost:8081/eureka/
+      defaultZone: http://localhost:8089/eureka/
