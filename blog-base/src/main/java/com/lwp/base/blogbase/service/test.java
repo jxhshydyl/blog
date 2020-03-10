@@ -1,4 +1,4 @@
-package com.lwp.blogbase.service;
+package com.lwp.base.blogbase.service;
 
 /**
  * @Auther: liuweipeng

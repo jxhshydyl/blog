@@ -1,4 +1,4 @@
-package com.lwp.blogbase.controller;
+package com.lwp.base.blogbase.controller;
 
 import com.lwp.base.blogbase.dto.BlogAlbumCategoryDto;
 

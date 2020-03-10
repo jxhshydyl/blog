@@ -1,6 +1,6 @@
 package com.lwp.blogcomment.repository;
 
-import com.lwp.comment.blogcomment.model.domain.Admin;
+import com.lwp.blogcomment.model.domain.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

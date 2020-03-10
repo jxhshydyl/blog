@@ -12,6 +12,7 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
+        <module>blog-base</module>
         <module>blog-gateway</module>
         <module>blog-eureka</module>
         <module>blog-ui</module>

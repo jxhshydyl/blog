@@ -1,6 +1,6 @@
 package com.lwp.blogcomment.config;
 
-import com.lwp.comment.blogcomment.filter.MyFilter;
+import com.lwp.blogcomment.filter.MyFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

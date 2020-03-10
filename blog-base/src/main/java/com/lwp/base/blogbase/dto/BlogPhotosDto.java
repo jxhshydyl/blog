@@ -1,4 +1,4 @@
-package com.lwp.blogbase.dto;
+package com.lwp.base.blogbase.dto;
 
 import lombok.Data;
 
